@@ -122,7 +122,9 @@ LEFT JOIN menu_items as m ON o.item_id = m.menu_item_id
 SELECT * FROM T
 WHERE order_id IN (440, 2075, 1957,330,2675);
 ```
+## Contact Information
 
+For further information, collaboration, or inquiries, feel free to contact [Phil Dinh](mailto:dinhthanhtrung2011@gmail.com).
 
 
 

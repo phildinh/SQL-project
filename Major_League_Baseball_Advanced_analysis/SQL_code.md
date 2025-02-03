@@ -16,7 +16,7 @@ The data for this analysis is sourced from several SQL tables stored in a Micros
 ## SQL Functions and Analysis Techniques
 Several SQL functions and techniques are used throughout this project to organize, filter, and derive meaningful patterns from the data:
 
-- **Aggregate Fundamental in performing calculations such as sums, averages, counts, and maximum values, which help in summarizing and analyzing large datasets efficiently. Examples from the project include `SUM()`, `AVG()`, `COUNT()`, and `MAX()` to aggregate player statistics and financial data.
+- **Aggregate Fundamental**: Fundamental in performing calculations such as sums, averages, counts, and maximum values, which help in summarizing and analyzing large datasets efficiently. Examples from the project include `SUM()`, `AVG()`, `COUNT()`, and `MAX()` to aggregate player statistics and financial data.
 - **Window Functions**: Utilized for performing calculations across sets of rows related to the current row, crucial for assessing running totals and calculating ranks or indexes without the need for a separate subquery. This includes `ROW_NUMBER()` and `NTILE()`, which are used to rank schools and analyze spending thresholds.
 - **Date Functions**: Applied to manage and manipulate date data types for calculating player ages, career durations, and temporal data analysis. Functions such as `DATEDIFF()` and `DATEFROMPARTS()` help determine time spans and specific date values.
 - **Common Table Expressions (CTEs) & Sub-query**: These are used to create temporary result sets that simplify the execution of complex queries involving multiple joins and subqueries, enhancing readability and maintainability of SQL scripts. 

@@ -28,7 +28,7 @@ The data flow starts with **source systems (CRM & ERP)**, where raw data is coll
 
 ---
 
-### **Key Relationships and Integration:**  
+## **Key Relationships and Integration:**  
 ![image](https://github.com/user-attachments/assets/61a9d9e2-2aae-4b08-a748-bd647ff0833e)
 
 
@@ -57,6 +57,29 @@ This model optimizes query performance, enabling **fast and efficient reporting*
 
 
 ---
+## **Deployment Guide**  
+Follow the **SQL scripts** to deploy the project step by step:
 
+1. **Initialize Database & Environment**:  
+   - Navigate to the `scripts` folder.
+   - Run `init_database.sql` to set up the **database and schemas**.
+
+2. **Bronze Layer - Raw Data Storage**:  
+   - Go to the `bronze` folder.
+   - Run `ddl_bronze.sql` to **create tables** and **define constraints** (e.g., `id INT`, `name NVARCHAR(50)`).
+   - Execute `proc_load_bronze.sql` to **load data from CRM and ERP sources** into the Bronze Layer tables.
+
+3. **Silver Layer - Data Cleansing & Transformation**:  
+   - Navigate to the `silver` folder.
+   - Run `ddl_silver.sql` to **create tables** for the Silver Layer (following the same steps as in the Bronze Layer).
+   - Execute `proc_load_silver.sql` to **transform data from the Bronze Layer and apply data cleansing**.
+   - At this stage, data in the Silver Layer is **clean and structured**.
+
+4. **Gold Layer - Business-Ready Data Model**:  
+   - Navigate to the `gold` folder.
+   - Run `ddl_gold.sql` to **combine tables** based on **key relationships and integration** from the previous layers.
+   - The final **star schema** is deployed, making data **ready for analytics and business insights**.
+
+---
 ## **Conclusion**  
 This project demonstrates how to **build a scalable data warehouse** using SQL Server, following **best practices in ETL, data modeling, and star schema design**. The structured data enables data analysts and business users to derive meaningful insights for decision-making.

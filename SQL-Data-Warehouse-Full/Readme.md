@@ -1,6 +1,6 @@
 # **Build Data Warehouse for Analytics and Business Insights**
 
-This project uses **Microsoft SQL Server** to build a **Data Warehouse** from scratch, integrating data from **CRM and ERP systems**. The **ETL process** extracts raw data, performs **data cleansing and transformation**, and loads **structured data** into a star schema for business analytics.
+This project uses **Microsoft SQL Server** to build a **Data Warehouse** from scratch, integrating data from **CRM and ERP sources**. The **ETL process** extracts raw data, performs **data cleansing and transformation**, and loads **structured data** into a star schema for business analytics.
 
 ---
 
@@ -28,17 +28,19 @@ The data flow starts with **source systems (CRM & ERP)**, where raw data is coll
 
 ---
 
-## **Data Integration to Build Data Model**  
+### **Key Relationships and Integration:**  
 ![image](https://github.com/user-attachments/assets/61a9d9e2-2aae-4b08-a748-bd647ff0833e)
 
 
-Data integration is crucial in building a **cohesive data model**.  
-- **CRM data** provides **sales transactions, customer details, and product history**.  
-- **ERP data** adds **customer location, product categories, and additional customer attributes**.  
-- **Key relationships** are established through **primary and foreign keys**, linking **customers, products, and sales** across systems.  
+- **CRM Data** includes **sales transactions, customer details, and product history**.  
+- **ERP Data** provides **customer locations, product categories, and additional customer attributes**.  
+- **Primary and Foreign Keys** establish relationships between **customers, products, and sales** across both sources.
 
-By integrating data from both sources, we create a **unified and structured dataset**, ensuring accuracy and consistency for analysis.
+From the diagram, we can observe:  
+- **Two ERP tables** provide **customer information** that links to the **CRM customer table**.  
+- **Another ERP table** provides **product category details** that relate to **CRM product data**.  
 
+To create a meaningful business schema, we integrate these sources following the **schema structure** shown in the diagram, ensuring accuracy and consistency for analysis and reporting.
 ---
 
 ## **Data Model**  
@@ -52,6 +54,7 @@ The **final data model** follows a **Star Schema**, consisting of:
   - `dim_products` → Combines **product history and categories**.  
 
 This model optimizes query performance, enabling **fast and efficient reporting** for business analytics.
+
 
 ---
 

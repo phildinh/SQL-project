@@ -81,5 +81,46 @@ Follow the **SQL scripts** to deploy the project step by step:
    - The final **star schema** is deployed, making data **ready for analytics and business insights**.
 
 ---
+
+## **Exploratory Data Analysis (EDA)**  
+After successfully building our **data warehouse**, the next step is to **explore our data**.  
+
+### **Why is EDA Important?**  
+When working on a **new role or project**, it's essential to **understand the data warehouse structure** and datasets. EDA helps answer questions such as:
+- How many datasets do we have?
+- How many columns exist in these datasets?
+- What are the column features and constraints?
+
+### **Step-by-Step EDA Process**  
+1. Navigate to the **`scripts`** folder.
+2. Open the **`Exploratory-Data-Steps`** folder.
+3. Run the **SQL scripts (01 to 06)** to:
+   - Identify **dimension and measure columns**.
+   - Analyze **date ranges** within the datasets.
+   - Explore **key measures** to understand their impact.
+   - Perform **magnitude analysis** to assess data distribution.
+   - Conduct **ranking analysis** to categorize performance levels.
+
+By performing these steps, we can gain **a complete overview of the dataset** before diving into deeper analysis.
+
+---
+
+## **Analyzing Data to Extract Business Insights**  
+Once we have **explored and understood** our datasets, the next step is to **analyze the data** to uncover **business insights**.
+
+### **Step-by-Step Business Analysis**  
+1. Stay in the **`scripts`** folder.
+2. Open the **`Analyze-Data-For-Business-Steps`** folder.
+3. Execute SQL scripts **01 to 07** in sequence to perform:
+   
+   - **Trend Analysis:** Examine how a **measure evolves over time** to detect trends and seasonality.
+   - **Deep Dive Analysis:** Drill down further to identify **causes of fluctuations** and anomalies.
+   - **Cumulative Analysis:** Calculate **running totals and moving averages** for key performance metrics.
+   - **Part-to-Whole Analysis:** Understand **category contributions** to overall sales or revenue.
+   - **Performance Analysis:** Evaluate **product, customer, and regional** performance over time.
+   - **Ad-Hoc Analysis:** Segment customers to support **business strategy and decision-making**.
+   - **Final Reporting:** Prepare a summary report on **customers and products** to provide actionable insights.
+  
+---   
 ## **Conclusion**  
 This project demonstrates how to **build a scalable data warehouse** using SQL Server, following **best practices in ETL, data modeling, and star schema design**. The structured data enables data analysts and business users to derive meaningful insights for decision-making.
